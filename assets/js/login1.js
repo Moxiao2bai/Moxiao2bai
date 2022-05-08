@@ -59,7 +59,8 @@ $(function () {
           return layer.msg('shibai');
         }
         layer.msg('登陆成功！')
-        location.href="https://www.baidu.com/"
+        localStorage.setItem('token', tgg.token)
+        location.href="./demo.html"
       }
     })
 
