@@ -8,7 +8,7 @@ if (options.url.indexOf('/my/') !== -1) {
   } }
 
   options.complete = function (tgg) {
-    console.log(tgg);
+  
   
     if (tgg.responseJSON.status === 1 && tgg.responseJSON.message === '身份认证失败！') {
       location.href = 'index.html'

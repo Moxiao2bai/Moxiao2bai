@@ -30,18 +30,18 @@ $(function(){
 
 
 function huoqu(){
-    console.log(3);
+   
     
     $.ajax({
         type:"get",
         url:'/my/userinfo',
         
         success:function(res){
-            console.log(1);
+            
             if(res.status !==0){
                 return layui.layer.msg('获取用户信息失败！')
             }
-            console.log(1);
+            
             xuanran(res.data)
         }
     })
@@ -50,11 +50,11 @@ function huoqu(){
 
 //渲染头像
 function xuanran(user){
-    
+   
     var name = user.nickname || user.username
-    console.log(name);
+   
     // 2. 设置欢迎的文本
-    $('#welcome').html('欢迎狗蛋')
+    $('#welcome').html('欢迎&nbsp'+name+'&nbsp狗蛋')
     // 3. 按需渲染用户的头像
     if(user.user_pic !==null){
         $('.layui-nav-img')
