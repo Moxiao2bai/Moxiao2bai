@@ -95,8 +95,8 @@ $(function(){
        //eg1
         layer.confirm('是否分手?', {icon: 3, title:'提示'}, function(index){
         //do something
-        layer.close(index);
-        });
+        
+        
         $.ajax({
         type:'get',
         url:'/my/article/deletecate/'+id,
@@ -105,10 +105,12 @@ $(function(){
               return layer.msg('删除分类失败！')
             }
             leibiao()
-            layer.msg('删除分类成功！')
+            layer.msg('删除 分类成功！')
             // 根据索引，关闭对应的弹出层
             layer.close(indexgai)
           }
         })
+        layer.close(index);
+      });
     })  
 })
